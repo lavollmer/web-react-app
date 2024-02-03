@@ -2,6 +2,7 @@ import React from "react";
 import { MdWbSunny } from "react-icons/md";
 import { FaLocationCrosshairs } from "react-icons/fa6";
 import { MdLocationOn } from "react-icons/md";
+import SearchBox from "./SearchBox";
 
 type Props = {};
 
@@ -20,7 +21,9 @@ export default function Navbar({}: Props) {
           <FaLocationCrosshairs className="text-2xl text-gray-400 hover:opacity-80 cursor-pointer" />
           <MdLocationOn className="text-3xl" />
           <p className="text-slate-900/80 text-sm"> Minnesota</p>
-          <div>{/* Search Box */}</div>
+          <div>
+            <SearchBox placeholder="Enter your search query here" />
+          </div>
         </section>
       </div>
     </nav>
