@@ -1,5 +1,6 @@
 import React from 'react'
 import { MdWbSunny } from "react-icons/md";
+import { FaLocationCrosshairs } from "react-icons/fa6";
 
 type Props = {}
 
@@ -14,6 +15,9 @@ export default function Navbar({}: Props) {
             <MdWbSunny className='text-3xl mt-1 text-yellow-300' />
           </h2>
         </p>
+        <section className='flex gap-2 items-center'>
+<FaLocationCrosshairs className='text-2xl text-gray-400 hover:opacity-80 cursor-pointer' />
+        </section>
       </div>
 </nav>
   )
