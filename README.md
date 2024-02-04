@@ -9,6 +9,10 @@ This project includes:
 - React Icons
 - Nextjx
 - Typescript
+- Tailwind CSS
+- TypeScript
+- JavaScript
+- React
 
 ## Credits
 
