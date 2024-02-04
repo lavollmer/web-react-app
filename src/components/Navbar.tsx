@@ -4,9 +4,9 @@ import { FaLocationCrosshairs } from "react-icons/fa6";
 import { MdLocationOn } from "react-icons/md";
 import SearchBox from "./SearchBox";
 
-type Props = {};
+type Props = { placeholder: string };
 
-export default function Navbar({}: Props) {
+export default function Navbar({ placeholder }: Props) {
   return (
     // sticky = stick navbar on position, left-0 position of navbar
     <nav className=" shadow-sm sticky top-0 z-50 bg-white">
