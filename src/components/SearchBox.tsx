@@ -3,15 +3,24 @@ import React from "react";
 import { CiSearch } from "react-icons/ci";
 
 //defines a type called Props
-type Props = { placeholder: string };
+type Props = {
+  placeholder: string;
+  onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
+  value: string;
+  onSubmit: React.FormEventHandler<HTMLFormElement> | undefined;
+};
 
 //exported as default module - component accepts placeholder prop
 //SearchBox has a form element with input and a button that passes the placeholder prop through
 export default function SearchBox({ placeholder }: Props) {
   return (
-    <form className="flex relative items-center justify-center h-10">
+    <form
+      onSubmit={}
+      className="flex relative items-center justify-center h-10"
+    >
       <input
         type="text"
+        onChange={}
         placeholder={placeholder}
         // px-4: Sets the horizontal padding of the element to 4 units.
         // py-2: Sets the vertical padding of the element to 2 units.
@@ -26,8 +35,8 @@ export default function SearchBox({ placeholder }: Props) {
       />
       {/* px-4 sets the horizontal padding of an element to 4 units, bg-blue-500 sets the background color of an element to a shade of blue, text-white sets the text color of an element to white, rounded-r-md applies rounded corners to the right side of an element, focus:outline-none removes the outline that appears around an element when it is in focus, hover:bg-blue-600 changes the background color of an element to a different shade of blue when the element is being hovered over., whitespace-nowrap prevents text from wrapping to the next line and keeps it on a single line., 
 h-full sets the height of an element to 100% of its parent container. */}
-      <button>
-        <CiSearch className="px-4 py-[9x] bg-blue-500 text-white rounded-r-md focus:outline-none hover:bg-blue-600 whitespace-nowrap h-full" />
+      <button className="px-4 py-[9x] bg-blue-500 text-white rounded-r-md focus:outline-none hover:bg-blue-600 whitespace-nowrap h-full">
+        <CiSearch />
       </button>
     </form>
   );
