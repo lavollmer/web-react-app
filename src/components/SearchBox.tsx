@@ -4,6 +4,7 @@ import { CiSearch } from "react-icons/ci";
 
 //defines a type called Props
 type Props = {
+  className?: string;
   placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
   value: string;
@@ -12,16 +13,17 @@ type Props = {
 
 //exported as default module - component accepts placeholder prop
 //SearchBox has a form element with input and a button that passes the placeholder prop through
-export default function SearchBox({ placeholder }: Props) {
+export default function SearchBox(props: Props) {
   return (
     <form
-      onSubmit={}
+      onSubmit={props.onSubmit}
       className="flex relative items-center justify-center h-10"
     >
       <input
         type="text"
-        onChange={}
-        placeholder={placeholder}
+        value={props.value}
+        onChange={props.onChange}
+        placeholder={props.placeholder}
         // px-4: Sets the horizontal padding of the element to 4 units.
         // py-2: Sets the vertical padding of the element to 2 units.
         // w-[230px]: Sets the width of the element to a fixed value of 230 pixels.
