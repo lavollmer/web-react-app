@@ -6,7 +6,7 @@ import { cn } from "../utils/cn";
 //defines a type called Props
 type Props = {
   className?: string;
-  placeholder: string;
+  // placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
   value: string;
   onSubmit: React.FormEventHandler<HTMLFormElement> | undefined;
@@ -27,7 +27,7 @@ export default function SearchBox(props: Props) {
         type="text"
         value={props.value}
         onChange={props.onChange}
-        placeholder={props.placeholder}
+        // placeholder={props.placeholder}
         // px-4: Sets the horizontal padding of the element to 4 units.
         // py-2: Sets the vertical padding of the element to 2 units.
         // w-[230px]: Sets the width of the element to a fixed value of 230 pixels.

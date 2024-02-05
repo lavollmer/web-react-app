@@ -6,7 +6,7 @@ import SearchBox from "./SearchBox";
 
 type Props = {
   className?: string;
-  placeholder: string;
+  // placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined;
   value: string;
   onSubmit: React.FormEventHandler<HTMLFormElement> | undefined;
@@ -28,7 +28,7 @@ export default function Navbar({ props }: Props) {
           <MdLocationOn className="text-3xl" />
           <p className="text-slate-900/80 text-sm"> Minnesota</p>
           <div>
-            <SearchBox placeholder="Enter your search query here" />
+            <SearchBox />
           </div>
         </section>
       </div>
