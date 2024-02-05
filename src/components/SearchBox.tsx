@@ -1,6 +1,7 @@
 //import necessary dependencies
 import React from "react";
 import { CiSearch } from "react-icons/ci";
+import { cn } from "../utils/cn";
 
 //defines a type called Props
 type Props = {
@@ -17,7 +18,10 @@ export default function SearchBox(props: Props) {
   return (
     <form
       onSubmit={props.onSubmit}
-      className="flex relative items-center justify-center h-10"
+      className={cn(
+        "flex relative items-center justify-center h-10",
+        props.className
+      )}
     >
       <input
         type="text"
