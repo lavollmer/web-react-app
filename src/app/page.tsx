@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "../components/Navbar";
 
 //api.openweathermap.org/data/2.5/weather?q=minneapolis&appid={02198656acbfe2c2afe6c0d052bc513c}
 export default function Home() {
